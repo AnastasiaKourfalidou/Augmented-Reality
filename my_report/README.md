@@ -22,30 +22,30 @@ For the development of the first deliverable the following features were impleme
 
 1. It is added and displayed a cylinder and a sphere object in our scene. This has been done by adding the following lines of code after the default box object.
 
-- <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.1; height: 1.0" position="-0.5 0 0" material="color: #FF66B2"></a-entity>
-- <a-entity id="sphere" geometry="primitive: sphere; radius: 0.1; height: 1.0" position="0.5 0 0" material="color: #FFFF99"></a-entity>
+- ```<a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.1; height: 1.0" position="-0.5 0 0" material="color: #FF66B2"></a-entity>```
+- ```<a-entity id="sphere" geometry="primitive: sphere; radius: 0.1; height: 1.0" position="0.5 0 0" material="color: #FFFF99"></a-entity>```
   There are also adjustments at the dimensions of the objects as well as their color.
 
 2.  There has been also added snow at the scene where the geometry objects are displayed, by using the Α-Frame particle system component. This was accomplished by modifying the source code by adding the following command:
 
-- <a-entity id="snow" position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000; size: 5"
+- ```<a-entity id="snow" position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000; size: 5"```
   There are adjustments at the size of the particles and the particleCount variable which defines the total number of particles this emitter will hold.
 
 3. Finally by using the Α-Frame speech command component we modified the source code, so when we give the speech command: stop it stops snowing, while when we give the speech command: start it starts snowing. In order to be able to use the speech recognition the following command had to be added fisrt:
 
-- <a-entity id="annyang" annyang-speech-recognition></a-entity>
+- ```<a-entity id="annyang" annyang-speech-recognition></a-entity>```
 
 After that it was necessary to define the speech commands as it is shown:
 
-- speech-command\_\_start="command: start; type: attribute; attribute: visible; value: true;"
-- speech-command\_\_stop="command: stop; type: attribute; attribute: visible; value: false;">
+- ```speech-command\_\_start="command: start; type: attribute; attribute: visible; value: true;"```
+- ```speech-command\_\_stop="command: stop; type: attribute; attribute: visible; value: false;">```
 
 They were added inside the snow entity because the functionality of the commands is referred to the snow. So when saying start it starts snowing and when saying stop it stops. Finally the code that was added looks like that:
 
-- <a-entity id="snow" position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000; size: 5"
+- ```<a-entity id="snow" position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000; size: 5"
    speech-command__start="command: start; type: attribute; attribute: visible; value: true;" 
    speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">
-  </a-entity>
+  </a-entity>```
 
 # Notes
 
