@@ -42,10 +42,10 @@ After that it was necessary to define the speech commands as it is shown:
 
 They were added inside the snow entity because the functionality of the commands is referred to the snow. So when saying start it starts snowing and when saying stop it stops. Finally the code that was added looks like that:
 
-- ```<a-entity id="snow" position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000; size: 5"
-   speech-command__start="command: start; type: attribute; attribute: visible; value: true;" 
-   speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">
-  </a-entity>```
+- ```<a-entity id="snow" position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000; size: 5"```
+   ```speech-command__start="command: start; type: attribute; attribute: visible; value: true;" ```
+   ```speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">```
+  ```</a-entity>```
 
 # Notes
 
