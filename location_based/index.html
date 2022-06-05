@@ -15,7 +15,20 @@
         vr-mode-ui="enabled: false"
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
-
+	    
+	 <a-assets>
+            <a-asset-item id="pigeon" src="assets/pigeon.gltf"></a-asset-item>
+        </a-assets>
+	   
+           
+	    <a-entity position="-6 -2 -6">
+            <a-entity gltf-model="#pigeon" scale="1 1 1" class="click" gps-entity-place="latitude:40.640064; longitude:22.944420;" text-show>
+                <a-entity class="clickable"
+                          position="3 5.2 0"
+                          text="color: ##FCC0CB; font-type: bold; align: center; value: Welcome to Thessaloniki!; width:5; heigh:4; letterSpacing: 11;"
+                          visible="false"></a-entity>
+            </a-entity>
+	    
         <a-box
             material="color: red;"
             scale="20 20 20"
@@ -24,9 +37,8 @@
 
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 1; maxDistance: 700;"
+            gps-camera="simulateLatitude:40.640064 ; simulateLongitude:22.944420 ; minDistance: 1; maxDistance: 700;"
         >
 		</a-camera>
 	</a-scene>
 </body>
-
